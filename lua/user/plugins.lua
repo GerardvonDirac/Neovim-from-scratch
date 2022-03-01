@@ -93,6 +93,12 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
+
+  -- writing improvements
+  use "tpope/vim-surround"
+  use "mg979/vim-visual-multi"
+  use "bkad/CamelCaseMotion"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
