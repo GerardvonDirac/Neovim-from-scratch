@@ -19,4 +19,16 @@ comment.setup {
       location = location,
     }
   end,
+  toggler = {
+      ---Line-comment toggle keymap
+      line = '\\c',
+      ---Block-comment toggle keymap
+      block = '\\v',
+  },
+  opleader = {
+      ---Line-comment keymap
+      line = '\\c ',
+      ---Block-comment keymap
+      block = '\\v ',
+  },
 }
