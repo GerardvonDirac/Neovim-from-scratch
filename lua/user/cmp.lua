@@ -121,6 +121,7 @@ cmp.setup {
       }
     },
     { name = "path" },
+    { name = "orgmode" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
