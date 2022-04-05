@@ -106,6 +106,9 @@ return packer.startup(function(use)
   use "mg979/vim-visual-multi"
   use "bkad/CamelCaseMotion"
 
+  -- jinja
+  use "lepture/vim-jinja"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
