@@ -118,6 +118,12 @@ return packer.startup(function(use)
   -- jinja
   use "lepture/vim-jinja"
 
+  -- Python
+  use {
+    "pappasam/nvim-repl",
+    requires = "tpope/vim-repeat",
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
