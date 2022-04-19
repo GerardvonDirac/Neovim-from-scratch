@@ -78,5 +78,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- REPL
 
 keymap("n", "<F5>", ":ReplToggle<CR>", opts)
-keymap("n", "\\w", ":ReplSend<CR>", opts)
+keymap("n", "\\w", ":ReplSend<CR>j", opts)
 keymap("v", "\\w", ":ReplSend<CR>", opts)
