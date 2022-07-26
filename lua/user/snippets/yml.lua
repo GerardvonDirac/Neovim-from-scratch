@@ -29,6 +29,6 @@ luasnip.add_snippets("yaml", {
 		t({"- debug:", "\t"}),
 		t("  msg: \"{{ "),
     i(1),
-    t({" }}\"", "\t"}),
+    t({" }}\""}),
 	}),
 })
