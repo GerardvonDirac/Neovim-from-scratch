@@ -46,3 +46,8 @@ vim.cmd "set whichwrap+=<,>,[,]"
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.cmd "let g:repl_filetype_commands = { 'python': 'bpython -q', }"
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "sh",
+  command = "setlocal shiftwidth=4 tabstop=4"
+})
