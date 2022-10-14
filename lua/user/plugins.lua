@@ -111,6 +111,15 @@ return packer.startup(function(use)
   use "tpope/vim-surround"
   use "mg979/vim-visual-multi"
   use "bkad/CamelCaseMotion"
+  use {
+   'lukoshkin/trailing-whitespace',
+   config = function ()
+      require'trailing-whitespace'.setup {
+         patterns = { '\\s\\+$', '\\t\\+' },
+         default_color = 'PaleVioletRed',
+      }
+   end
+}
 
   -- Orgmode stuff
   use "nvim-orgmode/orgmode"
