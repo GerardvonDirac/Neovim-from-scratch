@@ -1,38 +1,5 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
-
-vim.g.nvim_tree_git_hl = 1
-vim.g.nvim_tree_root_folder_modifier = ":t"
-vim.g.nvim_tree_quit_on_open = 0
-vim.g.nvim_tree_disable_window_picker = 0
-vim.g.nvim_tree_show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-  }
-
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -55,7 +22,6 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -93,11 +59,14 @@ nvim_tree.setup {
   actions = {
     open_file = {
       resize_window = true,
+      window_picker = {
+        enable = false,
+      },
+      quit_on_open = false,
     },
   },
   view = {
     width = 30,
-    height = 30,
     hide_root_folder = false,
     side = "left",
     mappings = {
@@ -114,6 +83,38 @@ nvim_tree.setup {
   trash = {
     cmd = "trash",
     require_confirm = true,
+  },
+  renderer = {
+    icons = {
+      show = {
+        git = true,
+        folder = true,
+        file = true,
+        folder_arrow = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      },
+    },
+    highlight_git = true,
+    root_folder_modifier = ":t",
   },
   -- quit_on_open = 0,
   -- git_hl = 1,
