@@ -96,6 +96,7 @@ return packer.startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
+    branch = "acd0155",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
