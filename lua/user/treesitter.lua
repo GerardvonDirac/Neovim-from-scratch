@@ -13,7 +13,7 @@ configs.setup {
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "org" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = false,
   },
   --[[ ensure_installed = { "org" }, ]]
   indent = { enable = true, disable = { "yaml" } },

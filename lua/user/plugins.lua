@@ -96,7 +96,7 @@ return packer.startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-    branch = "acd0155",
+    --[[ branch = "acd0155", ]]
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
@@ -128,7 +128,8 @@ return packer.startup(function(use)
   use "nvim-orgmode/orgmode"
 
   -- jinja
-  use "lepture/vim-jinja"
+  --[[ use "lepture/vim-jinja" ]]
+  use "https://gitlab.com/HiPhish/jinja.vim.git"
 
   -- Python
   use {
