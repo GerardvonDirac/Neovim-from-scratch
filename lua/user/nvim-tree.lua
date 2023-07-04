@@ -148,7 +148,7 @@ nvim_tree.setup {
     open_file = {
       resize_window = true,
       window_picker = {
-        enable = false,
+        enable = true,
       },
       quit_on_open = false,
     },
