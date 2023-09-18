@@ -1,32 +1,8 @@
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
-
-local tree_cb = nvim_tree_config.nvim_tree_callback
---
--- This function has been generated from your
---   view.mappings.list
---   view.mappings.custom_only
---   remove_keymaps
---
--- You should add this function to your configuration and set on_attach = on_attach in the nvim-tree setup call.
---
--- Although care was taken to ensure correctness and completeness, your review is required.
---
--- Please check for the following issues in auto generated content:
---   "Mappings removed" is as you expect
---   "Mappings migrated" are correct
---
--- Please see https://github.com/nvim-tree/nvim-tree.lua/wiki/Migrating-To-on_attach for assistance in migrating.
---
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -36,9 +12,6 @@ local function on_attach(bufnr)
   end
 
 
-  -- Default mappings. Feel free to modify or remove as you wish.
-  --
-  -- BEGIN_DEFAULT_ON_ATTACH
   vim.keymap.set('n', '<C-]>', api.tree.change_root_to_node,          opts('CD'))
   vim.keymap.set('n', '<C-e>', api.node.open.replace_tree_buffer,     opts('Open: In Place'))
   vim.keymap.set('n', '<C-k>', api.node.show_info_popup,              opts('Info'))
@@ -91,12 +64,6 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'Y',     api.fs.copy.relative_path,             opts('Copy Relative Path'))
   vim.keymap.set('n', '<2-LeftMouse>',  api.node.open.edit,           opts('Open'))
   vim.keymap.set('n', '<2-RightMouse>', api.tree.change_root_to_node, opts('CD'))
-  -- END_DEFAULT_ON_ATTACH
-
-
-  -- Mappings migrated from view.mappings.list
-  --
-  -- You will need to insert "your code goes here" for any mappings with a custom action_cb
   vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
 
 end
@@ -157,14 +124,6 @@ nvim_tree.setup {
     width = 30,
     hide_root_folder = false,
     side = "left",
-    mappings = {
-      custom_only = false,
-      list = {
-        -- { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        -- { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
     number = false,
     relativenumber = false,
   },
