@@ -5,9 +5,11 @@ local servers = {
 	-- "html",
 	-- "tsserver",
 	"pyright",
-	-- "bashls",
+	"bashls",
 	"jsonls",
 	-- "yamlls",
+  "gopls",
+  "ansiblels",
 }
 
 local settings = {
