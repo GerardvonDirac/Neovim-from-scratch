@@ -150,6 +150,12 @@ return packer.startup(function(use)
     "pappasam/nvim-repl",
     requires = "tpope/vim-repeat",
   }
+  -- macros
+  use 'kevinhwang91/rnvimr'
+  use {
+    "chrisgrieser/nvim-recorder",
+    requires = "rcarriga/nvim-notify", -- optional
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
