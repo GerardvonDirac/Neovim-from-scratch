@@ -80,3 +80,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<F5>", ":ReplToggle<CR>", opts)
 keymap("n", "\\r", ":ReplSend<CR>j", opts)
 keymap("v", "\\r", ":ReplSend<CR>", opts)
+
+-- vimux
+
+keymap("n", "<F4>", ":VimuxRunLastCommand<CR>", opts)
