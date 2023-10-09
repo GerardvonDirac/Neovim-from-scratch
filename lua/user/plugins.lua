@@ -156,6 +156,12 @@ return packer.startup(function(use)
     "chrisgrieser/nvim-recorder",
     requires = "rcarriga/nvim-notify", -- optional
   }
+  use 'dohsimpson/vim-macroeditor'
+  -- use {
+  --   "ecthelionvi/NeoComposer.nvim",
+  --   requires = { "kkharji/sqlite.lua" }
+  -- }
+  -- csv
   use {
     'cameron-wags/rainbow_csv.nvim',
     config = function()
