@@ -144,7 +144,7 @@ return packer.startup(function(use)
 
   -- jinja
   --[[ use "lepture/vim-jinja" ]]
-  use "https://gitlab.com/HiPhish/jinja.vim.git"
+  use "HiPhish/jinja.vim"
 
   -- Python
   use {
