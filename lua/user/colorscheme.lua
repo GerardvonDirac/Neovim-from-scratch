@@ -8,6 +8,7 @@ dracula.setup({
   -- overrides the default highlights with table see `:h synIDattr`
   overrides = {
     DiffText = { fg = colors.bg, bg = colors.orange },
+    SpecialKey = { bg = colors.fg, fg = colors.bg }, -- set NonText fg to white
   },
 })
 
