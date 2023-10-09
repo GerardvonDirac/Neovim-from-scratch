@@ -120,6 +120,7 @@ return packer.startup(function(use)
     "TimUntersberger/neogit",
     requires = "nvim-lua/plenary.nvim",
   }
+  use "sindrets/diffview.nvim"
 
   -- writing improvements
   use "tpope/vim-surround"
