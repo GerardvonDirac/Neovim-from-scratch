@@ -18,7 +18,7 @@ configs.setup {
   --[[ ensure_installed = { "org" }, ]]
   indent = { enable = true, disable = { "yaml" } },
   context_commentstring = {
-    enable = true,
+    enable = false,
     enable_autocmd = false,
   },
 }

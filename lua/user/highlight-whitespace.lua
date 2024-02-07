@@ -10,7 +10,7 @@ highlight_whitespace.setup {
     markdown = {
       tws = 'RosyBrown',
       ['\\(\\S\\)\\@<=\\s\\(\\.\\|,\\)\\@='] = 'CadetBlue3',
-      ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@='] = 'SkyBlue1',
+      ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@=|\\@!'] = 'SkyBlue1', -- exclude spaces followed by | to make tables prettier
       ['\\t\\+'] = 'plum4',
     },
     csv = {

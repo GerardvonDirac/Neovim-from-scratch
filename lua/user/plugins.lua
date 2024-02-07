@@ -52,6 +52,7 @@ return packer.startup(function(use)
     "akinsho/bufferline.nvim",
     branch = 'main'
   }
+  use "tiagovla/scope.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use {

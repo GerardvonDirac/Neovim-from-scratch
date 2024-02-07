@@ -36,6 +36,11 @@ keymap("n", "\\f", ":bnext<CR>", opts)
 keymap("n", "\\b", ":bprevious<CR>", opts)
 keymap("n", "\\g", ":BufferLinePick<CR>", opts)
 
+-- Navigate tabs
+keymap("n", "\\e", ":tabnext<CR>", opts)
+keymap("n", "\\d", ":tabprevious<CR>", opts)
+keymap("n", "\\n", ":tabnew<CR>", opts)
+
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
