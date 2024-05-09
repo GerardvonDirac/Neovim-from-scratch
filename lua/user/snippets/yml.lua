@@ -31,4 +31,10 @@ luasnip.add_snippets("yaml", {
     i(1),
     t({" }}\""}),
 	}),
+	s("vdebug", {
+		t({"- debug:", "\t"}),
+		t("  var: \""),
+    i(1),
+    t({"\""}),
+	}),
 })

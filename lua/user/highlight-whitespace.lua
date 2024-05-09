@@ -13,6 +13,9 @@ highlight_whitespace.setup {
       ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@=|\\@!'] = 'SkyBlue1', -- exclude spaces followed by | to make tables prettier
       ['\\t\\+'] = 'plum4',
     },
+    go = {
+      tws = 'PaleVioletRed',
+    },
     csv = {
       tws = 'bg',
       ['\\(\\S\\)\\@<=\\s\\(\\.\\|,\\)\\@='] = 'bg',
@@ -22,7 +25,7 @@ highlight_whitespace.setup {
     other = {
       tws = 'PaleVioletRed',
       ['\\(\\S\\)\\@<=\\s\\(,\\)\\@='] = 'coral1',
-      ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@='] = 'LightGoldenrod3',
+      -- ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@='] = 'LightGoldenrod3',
       ['\\t\\+'] = 'plum4',
     }
   }
