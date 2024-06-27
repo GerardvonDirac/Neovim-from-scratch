@@ -10,6 +10,8 @@ local servers = {
 	-- "yamlls",
   "gopls",
   "ansiblels",
+  "terraformls",
+  "tflint"
 }
 
 local settings = {
