@@ -189,6 +189,9 @@ return packer.startup(function(use)
   -- tmux
   use 'preservim/vimux'
 
+  -- debugging
+  use 'mfussenegger/nvim-dap'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
