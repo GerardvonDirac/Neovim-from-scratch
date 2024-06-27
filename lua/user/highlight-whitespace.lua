@@ -6,7 +6,7 @@ end
 highlight_whitespace.setup {
   tws = '\\s\\+$',
   clear_on_winleave = false,
-  user_palette = {
+  palette = {
     markdown = {
       tws = 'RosyBrown',
       ['\\(\\S\\)\\@<=\\s\\(\\.\\|,\\)\\@='] = 'CadetBlue3',
