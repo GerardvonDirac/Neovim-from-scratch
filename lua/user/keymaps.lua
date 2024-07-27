@@ -32,14 +32,14 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "\\f", ":bnext<CR>", opts)
-keymap("n", "\\b", ":bprevious<CR>", opts)
-keymap("n", "\\g", ":BufferLinePick<CR>", opts)
+keymap("n", "\\f", ":bnext<CR>", { noremap = true, silent = true, desc = "Next buffer" })
+keymap("n", "\\b", ":bprevious<CR>",  { noremap = true, silent = true, desc = "Previous buffer" })
+keymap("n", "\\g", ":BufferLinePick<CR>",  { noremap = true, silent = true, desc = "Pick buffer" })
 
 -- Navigate tabs
-keymap("n", "\\e", ":tabnext<CR>", opts)
-keymap("n", "\\d", ":tabprevious<CR>", opts)
-keymap("n", "\\n", ":tabnew<CR>", opts)
+keymap("n", "\\e", ":tabnext<CR>", { noremap = true, silent = true, desc = "Next tab" })
+keymap("n", "\\d", ":tabprevious<CR>", { noremap = true, silent = true, desc = "Previous tab" })
+keymap("n", "\\n", ":tabnew<CR>", { noremap = true, silent = true, desc = "New tab" })
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
