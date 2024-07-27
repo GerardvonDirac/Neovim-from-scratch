@@ -89,3 +89,7 @@ keymap("v", "\\r", ":ReplSend<CR>", opts)
 -- vimux
 
 keymap("n", "<F4>", ":VimuxRunLastCommand<CR>", opts)
+
+-- replacer
+
+keymap('n', '<C-h>', ':lua require("replacer").run()<cr>', { silent = true })
