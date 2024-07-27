@@ -122,6 +122,29 @@ return packer.startup(function(use)
     requires = "nvim-lua/plenary.nvim",
   }
   use "sindrets/diffview.nvim"
+  use {
+    "harrisoncramer/gitlab.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "stevearc/dressing.nvim" -- Recommended but not required. Better UI for pickers.
+      -- "nvim-tree/nvim-web-devicons", -- Recommended but not required. Icons in discussion tree.
+    },
+    build = function()
+      require("gitlab.server").build()
+    end,
+    branch = "develop",
+    -- config = function()
+    --   require("diffview") -- We require some global state from diffview
+    --   local gitlab = require("gitlab")
+    --   gitlab.setup(
+    --     {
+    --       config_path = "/home/ckleist/.config/gitlab/.gitlab.nvim"
+    --     }
+    --   )
+    -- end,
+  }
 
   -- writing improvements
   use "tpope/vim-surround"
