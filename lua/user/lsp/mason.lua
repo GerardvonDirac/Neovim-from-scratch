@@ -11,7 +11,8 @@ local servers = {
   "gopls",
   "ansiblels",
   "terraformls",
-  "tflint"
+  "tflint",
+  "marksman"
 }
 
 local settings = {
