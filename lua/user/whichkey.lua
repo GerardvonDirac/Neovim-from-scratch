@@ -78,6 +78,36 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
+function search_selected_text()
+  -- Restore the last visual selection
+  vim.cmd('normal! gv')  -- 'gv' restores the last visual selection
+
+  -- Get the selected text
+  local start_pos = vim.fn.getpos("v")  -- Get start position of the visual selection
+  local end_pos = vim.fn.getpos(".")    -- Get end position of the visual selection
+
+  -- Retrieve the selected text using the positions
+  local selected_text = vim.fn.getline(start_pos[2]):sub(start_pos[3], end_pos[3])
+
+  -- Debugging: Output the selected text to :messages
+  vim.api.nvim_out_write("Last Selected Text: '" .. selected_text .. "'\n")
+
+  -- If selected_text is non-empty, perform a Telescope search
+  if selected_text and selected_text ~= "" then
+    require('telescope.builtin').grep_string({
+      search = selected_text
+    })
+  else
+    vim.api.nvim_out_write("No valid selection found.\n")
+  end
+end
+
+-- Create a keymap to search the last visual selection
+vim.api.nvim_set_keymap('n', '<leader>sf', [[:lua search_last_visual_selection()<CR>]], { noremap = true, silent = true })
+
+-- Keybinding: Press <leader>sv to search the selected text across multiple files
+vim.api.nvim_set_keymap('v', '<leader>sv', [[:lua search_selected_text()<CR>]], { noremap = true, silent = true })
+
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
@@ -94,10 +124,11 @@ local mappings = {
     name = "Find",
     f = {
       "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-      "Find files",
+      "Find Files",
     },
     t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     s = { "<cmd>Telescope grep_string theme=ivy<cr>", "Find String" },
+    l = { "<cmd>lua search_selected_text()<cr>", "Find seLection" },
   },
 
   p = {

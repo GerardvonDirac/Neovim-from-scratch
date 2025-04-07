@@ -56,3 +56,16 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "go",
   command = "setlocal noexpandtab"
 })
+
+-- Set the folding method (indent, syntax, etc.)
+-- vim.o.foldmethod = 'indent'  -- Or another folding method you're using
+vim.o.foldtext = 'v:lua.CustomFoldText()'
+
+-- Define the function to return the folded line count
+function CustomFoldText()
+  local lnum = vim.v.foldend - vim.v.foldstart + 1
+  return '+-- ' .. lnum .. ' lines'
+end
+
+-- Enable matchparen plugin in Neovim (it is usually enabled by default)
+-- vim.cmd('runtime! plugin/matchparen.vim')

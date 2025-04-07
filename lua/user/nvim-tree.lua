@@ -131,6 +131,7 @@ nvim_tree.setup {
     require_confirm = true,
   },
   renderer = {
+    hidden_display = "all",
     icons = {
       show = {
         git = true,

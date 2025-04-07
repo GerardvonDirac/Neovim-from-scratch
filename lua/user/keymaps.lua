@@ -93,3 +93,6 @@ keymap("n", "<F4>", ":VimuxRunLastCommand<CR>", opts)
 -- replacer
 
 keymap('n', '<C-h>', ':lua require("replacer").run()<cr>', { silent = true })
+
+keymap('n', "\\Z", ':setlocal foldexpr=(getline(v:lnum)=~@/)?0:1 foldmethod=expr foldlevel=0 foldcolumn=2 foldminlines=0<CR><CR>', opts)
+keymap('n', "\\z", ':setlocal foldexpr=(getline(v:lnum)=~@/)?1:0 foldmethod=expr foldlevel=0 foldcolumn=2 foldminlines=0<CR><CR>', opts)

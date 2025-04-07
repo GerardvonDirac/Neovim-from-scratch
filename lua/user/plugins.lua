@@ -64,7 +64,10 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
+  use {
+    "folke/which-key.nvim",
+    tag = 'v2.1.0',
+  }
   use {
     's1n7ax/nvim-window-picker',
     tag = 'v1.5',
@@ -109,6 +112,13 @@ return packer.startup(function(use)
 
   use "gabrielpoca/replacer.nvim"
 
+  use {
+    'simrat39/symbols-outline.nvim',
+    config = function ()
+      require("symbols-outline").setup()
+    end
+  }
+
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -126,7 +136,7 @@ return packer.startup(function(use)
     "TimUntersberger/neogit",
     requires = "nvim-lua/plenary.nvim",
   }
-  use "sindrets/diffview.nvim"
+  -- use "sindrets/diffview.nvim"
   use {
     "harrisoncramer/gitlab.nvim",
     requires = {
